@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+:root {
+  --radius: 0.75rem;
+  --background: oklch(0.99 0.005 80);
+  --foreground: oklch(0.18 0.02 250);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.02 250);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.02 250);
+  --primary: oklch(0.78 0.14 85);
+  --primary-foreground: oklch(0.18 0.02 250);
+  --secondary: oklch(0.97 0.01 250);
+  --secondary-foreground: oklch(0.2 0.02 250);
+  --muted: oklch(0.97 0.005 250);
+  --muted-foreground: oklch(0.5 0.02 250);
+  --accent: oklch(0.97 0.02 85);
+  --accent-foreground: oklch(0.2 0.02 250);
+  --destructive: oklch(0.6 0.24 27);
+  --border: oklch(0.92 0.01 80);
+  --input: oklch(0.93 0.01 250);
+  --ring: oklch(0.78 0.14 85);
+
+  --gold: oklch(0.78 0.14 85);
+  --sugar: oklch(0.985 0.008 80);
+  --surface: oklch(1 0 0);
+
+  --level-1: oklch(0.62 0.22 27);
+  --level-2: oklch(0.72 0.18 55);
+  --level-3: oklch(0.78 0.16 95);
+  --level-4: oklch(0.62 0.18 245);
+  --level-5: oklch(0.62 0.18 150);
+}
+
+.dark {
+  --background: oklch(0.16 0.02 260);
+  --foreground: oklch(0.96 0.01 80);
+  --card: oklch(0.21 0.02 260);
+  --card-foreground: oklch(0.96 0.01 80);
+  --popover: oklch(0.21 0.02 260);
+  --popover-foreground: oklch(0.96 0.01 80);
+  --primary: oklch(0.82 0.14 85);
+  --primary-foreground: oklch(0.16 0.02 260);
+  --secondary: oklch(0.24 0.02 260);
+  --secondary-foreground: oklch(0.96 0.01 80);
+  --muted: oklch(0.24 0.02 260);
+  --muted-foreground: oklch(0.7 0.02 260);
+  --accent: oklch(0.28 0.04 85);
+  --accent-foreground: oklch(0.96 0.01 80);
+  --border: oklch(0.3 0.02 260);
+  --input: oklch(0.28 0.02 260);
+  --ring: oklch(0.82 0.14 85);
+  --surface: oklch(0.21 0.02 260);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-border: var(--border);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Custom thin scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: oklch(0.7 0 0 / 0.25); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: oklch(0.5 0 0 / 0.4); }
+
+/* Selection highlight */
+::selection { background: oklch(0.78 0.14 85 / 0.3); }
